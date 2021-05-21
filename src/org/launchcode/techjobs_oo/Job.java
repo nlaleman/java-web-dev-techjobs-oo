@@ -96,6 +96,25 @@ public class Job {
 
     @Override
     public String toString() {
+        if (name == "" && employer.getValue() == "" && location.getValue() == "" && positionType.getValue() == "" && coreCompetency.getValue() == ""){
+            return "OOPS! This job does not seem to exist.";
+        }
+        if (name == ""){
+            name = "Data not available";
+        }
+        if (employer.getValue() == ""){
+            employer.setValue("Data not available");
+        }
+        if (location.getValue() == ""){
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue() == ""){
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue() == ""){
+            coreCompetency.setValue("Data not available");
+        }
+
         return "\n" +
                 "ID: " + id + "\n" +
                 "Name: " + name + "\n" +
