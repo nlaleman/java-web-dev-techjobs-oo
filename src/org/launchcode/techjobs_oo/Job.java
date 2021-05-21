@@ -97,12 +97,12 @@ public class Job {
     @Override
     public String toString() {
         return "\n" +
-                "ID: " + getId() + "\n" +
-                "Name: " + getName() + "\n" +
-                "Employer: " + getEmployer().getValue() + "\n" +
-                "Location: " + getLocation().getValue() + "\n" +
-                "Position Type: " + getPositionType().getValue() + "\n" +
-                "Core Competency: " + getCoreCompetency().getValue() + "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer.getValue() + "\n" +
+                "Location: " + location.getValue() + "\n" +
+                "Position Type: " + positionType.getValue() + "\n" +
+                "Core Competency: " + coreCompetency.getValue() + "\n" +
                 "\n";
     }
 

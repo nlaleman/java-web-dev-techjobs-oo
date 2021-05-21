@@ -34,8 +34,8 @@ public class JobTest {
     @Test
     public void testJobToString(){
         Job test = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertTrue(test.toString() == "\nID: " + test.getId() + "\nName: Product tester\n" +
-                "Employer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n\n");
-    }
+        assertEquals(test.toString(), "\nID: " + test.getId() + "\nName: Product tester\n" +
+                        "Employer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n\n");
+   }
 
 }
