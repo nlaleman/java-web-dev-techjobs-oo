@@ -1,6 +1,7 @@
 package org.launchcode.techjobs_oo;
 
 import java.util.Objects;
+import java.util.spi.CalendarNameProvider;
 
 public class Job {
 
@@ -99,29 +100,35 @@ public class Job {
         if (name == "" && employer.getValue() == "" && location.getValue() == "" && positionType.getValue() == "" && coreCompetency.getValue() == ""){
             return "OOPS! This job does not seem to exist.";
         }
-        if (name == ""){
-            name = "Data not available";
+
+        String aName = name;
+        if (aName.equals("")){
+            aName = "Data not available";
         }
-        if (employer.getValue() == ""){
-            employer.setValue("Data not available");
+        String anEmployer = employer.getValue();
+        if (anEmployer.equals("")){
+            anEmployer = "Data not available";
         }
-        if (location.getValue() == ""){
-            location.setValue("Data not available");
+        String aLocation = location.getValue();
+        if (aLocation.equals("")){
+            aLocation="Data not available";
         }
-        if (positionType.getValue() == ""){
-            positionType.setValue("Data not available");
+        String aPositionType = positionType.getValue();
+        if (aPositionType.equals("")){
+            aPositionType="Data not available";
         }
-        if (coreCompetency.getValue() == ""){
-            coreCompetency.setValue("Data not available");
+        String aCoreCompetency = coreCompetency.getValue();
+        if (aCoreCompetency.equals("")){
+            aCoreCompetency="Data not available";
         }
 
         return "\n" +
                 "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer.getValue() + "\n" +
-                "Location: " + location.getValue() + "\n" +
-                "Position Type: " + positionType.getValue() + "\n" +
-                "Core Competency: " + coreCompetency.getValue() + "\n" +
+                "Name: " + aName + "\n" +
+                "Employer: " + anEmployer + "\n" +
+                "Location: " + aLocation + "\n" +
+                "Position Type: " + aPositionType + "\n" +
+                "Core Competency: " + aCoreCompetency + "\n" +
                 "\n";
     }
 
