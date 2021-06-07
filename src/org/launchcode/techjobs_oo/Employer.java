@@ -9,8 +9,4 @@ public class Employer extends JobField {
         this.value = value;
     }
 
-    // Custom toString, equals, and hashCode methods:
-
-
-
 }
