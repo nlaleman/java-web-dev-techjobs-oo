@@ -5,12 +5,7 @@ import java.util.Objects;
 public class Employer extends JobField {
 
     public Employer(String value) {
-        this();
-        this.value = value;
+        super(value);
     }
-
-    // Custom toString, equals, and hashCode methods:
-
-
 
 }
